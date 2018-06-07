@@ -9,6 +9,10 @@ const CreditInformation = new mongoose.Schema({
   months: { type: Number, required: true },
   firstName: { type: String, required: true },
   lastName: {type: String, required: true },
+  mothlyPayment: { type: Number },
+  date: { type: Date, default: Date.now()},
+  creditKey: { type: String },
+  verified: { type: Boolean, default: false}
 });
 
 mongoose.model('CreditInformation', CreditInformation);
