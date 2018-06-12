@@ -22,5 +22,5 @@ app.post('/verify', controllers.verifyPage)
 
 // TO FIX
 // database structure must be fixed ==> DONE
-// creditKey must be crypted ==>
+// creditKey must be crypted ==> DONE
 // Fix the structure of the application ==> DONE

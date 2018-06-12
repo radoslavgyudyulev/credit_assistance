@@ -65,17 +65,10 @@ const transporter = nodemailer.createTransport({
 
 // After Validation => Saving the credit to Database
 function saveTheCredit() {
-    //let hash = bcrypt.hashSync(randomString, 10);
+    let hash = bcrypt.hashSync(randomString, 10);
+    console.log(randomString)
+    console.log(hash)
     CreditInformation.create({
-        // creditAmount: creditAmount,
-        // mobile: mobile,
-        // email: email,
-        // monthlyIncome: monthlyIncome,
-        // months: months,
-        // firstName: firstName,
-        // lastName: lastName,
-        // mothlyPayment: creditAmount / months,
-        // creditKey: randomString
         userData: {
             mobile: mobile,  
             email: email,
@@ -87,7 +80,7 @@ function saveTheCredit() {
             monthlyIncome: monthlyIncome,
             months: months,
             mothlyPayment: creditAmount / months,
-            creditKey: randomString
+            creditKey: hash
             }
     }, 
     function (err, user) {

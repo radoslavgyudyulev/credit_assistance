@@ -12,11 +12,11 @@ const CreditInformation = new mongoose.Schema({
     creditAmount: { type: Number, required: true },
     monthlyIncome: { type: Number, required: true },
     months: { type: Number, required: true },
-    mothlyPayment: { type: Number },
+    mothlyPayment: { type: Number, required: true },
     date: { type: Date, default: Date.now()},
     creditKey: { type: String },
+  },
     verified: { type: Boolean, default: false}
-  }
   
 });
 
